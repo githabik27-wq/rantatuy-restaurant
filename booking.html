@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Бронь и контакты — Рантатуй</title>
+  <meta name="description" content="Забронировать стол в ресторане «Рантатуй» на Уралмаше: заявка, телефон, Telegram. Екатеринбург, ул. Уралмашовских, 34.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Бронь и контакты — Рантатуй">
+  <meta property="og:description" content="Бронирование стола, телефон и соцсети ресторана «Рантатуй» на Уралмаше.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3v18M4.2 7.5l15.6 9M19.8 7.5l-15.6 9' stroke='%23B4552E' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="booking">
+  <a class="skip" href="#main" data-i18n="g.skip">Перейти к содержимому</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="header" id="top">
+    <div class="container header__in">
+      <a class="logo" href="index.html" aria-label="Рантатуй — на главную">
+        <span class="logo__word">Рантатуй</span>
+        <svg class="logo__mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M4.2 7.5l15.6 9M19.8 7.5l-15.6 9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="index.html" data-i18n="g.nav.home">Главная</a>
+        <a href="about.html" data-i18n="g.nav.about">О ресторане</a>
+        <a href="menu.html" data-i18n="g.nav.menu">Меню</a>
+        <a href="promos.html" data-i18n="g.nav.promos">Акции</a>
+        <a href="booking.html" class="is-current" data-i18n="g.nav.contacts">Контакты</a>
+      </nav>
+      <div class="header__right">
+        <a class="phone" href="tel:+70000000000">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <span>+7 000 000-00-00</span>
+        </a>
+        <div class="lang" role="group" aria-label="Язык / Language">
+          <button type="button" class="lang__btn is-active" data-lang="ru">RU</button>
+          <button type="button" class="lang__btn" data-lang="en">EN</button>
+        </div>
+        <a class="btn btn--primary btn--sm header__cta" href="#bookform" data-i18n="g.cta.book">Забронировать</a>
+        <input type="checkbox" id="mnav" class="mnav-input">
+        <label for="mnav" class="burger" aria-label="Открыть меню"><span></span><span></span><span></span></label>
+      </div>
+    </div>
+    <nav class="mnav" aria-label="Мобильная навигация">
+      <a href="index.html" data-i18n="g.nav.home">Главная</a>
+      <a href="about.html" data-i18n="g.nav.about">О ресторане</a>
+      <a href="menu.html" data-i18n="g.nav.menu">Меню</a>
+      <a href="promos.html" data-i18n="g.nav.promos">Акции</a>
+      <a href="booking.html" data-i18n="g.nav.contacts">Контакты</a>
+      <a class="mnav__phone" href="tel:+70000000000">+7 000 000-00-00</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ШАПКА -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="overline">Бронь</p>
+        <h1 class="h2" style="font-size:clamp(2.25rem,5vw,3.75rem)" data-i18n="bk.title">Забронировать стол</h1>
+        <p class="lead" data-i18n="bk.lead">Оставьте заявку — перезвоним и подтвердим. Или напишите нам в Telegram, так быстрее.</p>
+      </div>
+    </section>
+
+    <!-- ФОРМА + КОНТАКТЫ -->
+    <section class="section" style="padding-top:var(--sp-8)">
+      <div class="container booking__grid">
+        <div class="booking__formcol">
+          <form class="form" id="bookform" novalidate>
+            <div class="field">
+              <label for="f-name" data-i18n="form.name">Имя</label>
+              <input type="text" id="f-name" name="name" autocomplete="name" required>
+              <p class="field__err" id="err-name" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="f-phone" data-i18n="form.phone">Телефон</label>
+              <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel" required>
+              <p class="field__err" id="err-phone" aria-live="polite"></p>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-date" data-i18n="form.date">Дата</label>
+                <input type="date" id="f-date" name="date" required>
+                <p class="field__err" id="err-date" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="f-time" data-i18n="form.time">Время</label>
+                <input type="time" id="f-time" name="time" min="09:00" max="23:59" required>
+                <p class="field__err" id="err-time" aria-live="polite"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-guests" data-i18n="form.guests">Гости</label>
+              <select id="f-guests" name="guests">
+                <option value="1" data-i18n="form.g1">1 гость</option>
+                <option value="2" selected data-i18n="form.g2">2 гостя</option>
+                <option value="3-4" data-i18n="form.g3">3–4 гостя</option>
+                <option value="5+" data-i18n="form.g4">5 и больше</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-comment" data-i18n="form.comment">Комментарий <span class="opt" data-i18n="form.opt">необязательно</span></label>
+              <textarea id="f-comment" name="comment" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block" data-i18n="form.submit">Отправить заявку</button>
+            <p class="form__ok" id="formok" aria-live="polite" hidden></p>
+          </form>
+        </div>
+
+        <aside class="contacts" id="contacts" aria-label="Контакты">
+          <div class="contacts__card">
+            <h2 class="h3" data-i18n="ct.title">Контакты</h2>
+            <ul class="contacts__list">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+                <div>
+                  <p data-i18n="ct.addr">Екатеринбург, ул. Уралмашовских, 34</p>
+                  <p class="muted" data-i18n="ct.addr_n">вход со стороны завода</p>
+                </div>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                <div>
+                  <p data-i18n="ct.hours">9:00–00:00</p>
+                  <p class="muted" data-i18n="ct.hours_n">ежедневно</p>
+                </div>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                <div>
+                  <p><a href="tel:+70000000000">+7 000 000-00-00</a></p>
+                </div>
+              </li>
+            </ul>
+            <div class="contacts__social">
+              <a class="btn btn--outline btn--sm" href="https://t.me/telegram" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.6 18.8 19c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-.9.5l.3-4.6L18 6.9c.4-.3-.1-.5-.6-.2L7.2 13.2 2.7 11.8c-1-.3-1-1 .2-1.4l17.6-6.8c.8-.3 1.5.2 1.4 1z" fill="currentColor"/></svg>
+                <span data-i18n="g.tg">Telegram</span>
+              </a>
+              <a class="btn btn--outline btn--sm" href="https://vk.com/vk" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 17.2c-5.1 0-8.2-3.5-8.3-9.2h2.6c.1 4.3 2 6.1 3.6 6.4V8h2.4v3.7c1.5-.2 2.9-2 3.4-3.7h2.4c-.4 2.2-2 4-3.1 4.7 1.2.6 3 2.3 3.6 4.5h-2.6c-.5-1.7-1.9-3-3.7-3.1v3.1h-2.3z" fill="currentColor"/></svg>
+                <span data-i18n="g.vk">ВКонтакте</span>
+              </a>
+            </div>
+            <a class="btn btn--ghost btn--sm contacts__map" href="https://yandex.ru/maps/?text=%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A3%D1%80%D0%B0%D0%BB%D0%BC%D0%B0%D1%88%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D1%85%2C%2034" target="_blank" rel="noopener" data-i18n="ct.map">Открыть в Яндекс Картах</a>
+            <p class="contacts__note" data-i18n="ct.note">Не дозвонились — напишите в Telegram, отвечаем в рабочее время.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="band">
+          <div class="band__in">
+            <div>
+              <p class="overline" data-i18n="bk.band_over">Доставка</p>
+              <h2 class="h2" data-i18n="bk.band_title">Привезём горячее домой</h2>
+              <p data-i18n="bk.band_p">Закажите любимые блюда с собой — работаем с 9:00 до 00:00. Точную зону и время уточняйте по телефону.</p>
+            </div>
+            <div class="band__actions">
+              <a class="btn btn--primary" href="https://t.me/telegram" target="_blank" rel="noopener" data-i18n="bk.band_tg">Написать в Telegram</a>
+              <a class="btn btn--outline" href="tel:+70000000000" data-i18n="bk.band_call">Позвонить</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="logo" href="index.html"><span class="logo__word">Рантатуй</span>
+          <svg class="logo__mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M4.2 7.5l15.6 9M19.8 7.5l-15.6 9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </a>
+        <p class="muted" data-i18n="g.footer_tagline">Ресторан домашней кухни на Уралмаше.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <a href="index.html" data-i18n="g.nav.home">Главная</a>
+        <a href="about.html" data-i18n="g.nav.about">О ресторане</a>
+        <a href="menu.html" data-i18n="g.nav.menu">Меню</a>
+        <a href="promos.html" data-i18n="g.nav.promos">Акции</a>
+        <a href="booking.html" data-i18n="g.nav.contacts">Контакты</a>
+      </nav>
+      <div class="footer__contacts">
+        <p><a href="tel:+70000000000">+7 000 000-00-00</a></p>
+        <p class="muted" data-i18n="g.footer_addr">Екатеринбург, ул. Уралмашовских, 34</p>
+        <p class="muted" data-i18n="g.footer_hours">9:00–00:00</p>
+      </div>
+      <div class="footer__social">
+        <a class="btn btn--outline btn--sm" href="https://t.me/telegram" target="_blank" rel="noopener" data-i18n="g.tg">Telegram</a>
+        <a class="btn btn--outline btn--sm" href="https://vk.com/vk" target="_blank" rel="noopener" data-i18n="g.vk">ВКонтакте</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p class="muted">© 2026 Рантатуй</p>
+      <a class="muted" href="#" data-i18n="g.footer_policy">Политика конфиденциальности</a>
+    </div>
+  </footer>
+
+  <div class="stickybar" id="stickybar" hidden>
+    <a class="btn btn--primary" href="booking.html" data-i18n="g.sticky_book">Забронировать</a>
+    <a class="btn btn--outline" href="tel:+70000000000" data-i18n="g.sticky_call">Позвонить</a>
+    <button type="button" class="stickybar__close" id="stickyclose" aria-label="Скрыть панель"></button>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
