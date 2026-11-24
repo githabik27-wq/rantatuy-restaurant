@@ -46,7 +46,9 @@ soup `photo-1547592180-85f173990554` · fish `photo-1467003909585-2f8a72700288` 
 scenarios `photo-1466978913421-dad2ebd01d17` · dessert `photo-1565958011703-44f9829ba187` ·
 coffee `photo-1445116572660-236099ec97a0` · saturday `photo-1493770348161-369560ae357d` ·
 plated `photo-1551218808-94e220e084d2` · breakfast `photo-1484723091739-30a097e8f929` ·
-pancakes `photo-1567620905732-2d1ec7ab7445` · interior-a/b/c и atmosphere — см. файлы в `assets/img/`.
+pancakes `photo-1567620905732-2d1ec7ab7445` · dessert2 `photo-1488477181946-6428a0291777` ·
+coffee2 `photo-1495474472287-4d71bcdd2085` · saturday2 `photo-1490645935967-10de6ba17061` ·
+interior-a/b/c и atmosphere — см. файлы в `assets/img/`.
 
 ## ⚠️ Черновой контент (подтвердить владельцу)
 
